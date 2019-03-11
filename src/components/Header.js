@@ -16,6 +16,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import MenuDrawer from './MenuDrawer.js';
 
 const styles = theme => ({
   root: {
@@ -167,10 +168,10 @@ class Header extends React.Component {
         <AppBar position="static" color="default">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuIcon />
+              <MenuDrawer />
             </IconButton>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              Toastmaster
+              EventApp
             </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>

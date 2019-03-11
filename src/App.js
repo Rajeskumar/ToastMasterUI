@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
+import HomePage from './pages/HomePage.js';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <HomePage />
         <Footer/>
       </div>
     );
