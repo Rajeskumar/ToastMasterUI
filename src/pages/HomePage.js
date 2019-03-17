@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+import Typography from '@material-ui/core/Typography';
 
 class HomePage extends React.Component{
 
@@ -8,26 +8,16 @@ class HomePage extends React.Component{
 
         this.state = {
             memberList:[],
+            eventList:[],
         }
-
-        this.fetchData();
     }
 
-    fetchData(){
-        var that = this;
-        // Make a request for a user with a given ID
-        axios.get('http://localhost:8080/toastmasterapi/getMembers').then(function (response) {
-        console.log(response);
-        var memberList = response.data;
-        that.setState({memberList: memberList});
-        }).catch(function (error) {
-        console.log(error);
-        });
-    }
     render(){
         return(
             <div>
-
+                <Typography variant='headline' align='center' gutterBottom>
+                    Welcome to ToastMaster Event
+                </Typography>
             </div>
         );
     }
