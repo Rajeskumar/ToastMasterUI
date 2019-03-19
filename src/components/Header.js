@@ -16,7 +16,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import MenuDrawer from './MenuDrawer.js';
-import {BrowserRouter as Router, Route, Link, Switch, Redirec} from "react-router-dom";
+import CreateEvent from './CreateEvent'
+import AddEvaluationReport from './AddEvaluationReport';
 
 const styles = theme => ({
   root: {
@@ -165,13 +166,13 @@ class Header extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="default">
+        <AppBar position="static">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
               <MenuDrawer />
             </IconButton>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              EventApp
+              ToastMaster
             </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -187,6 +188,8 @@ class Header extends React.Component {
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
+              <AddEvaluationReport />
+              <CreateEvent memberList={this.state.memberList}/>
               <IconButton color="inherit">
                 <Badge badgeContent={4} color="secondary">
                   <MailIcon />

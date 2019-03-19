@@ -16,7 +16,7 @@ class HomePage extends React.Component{
         return(
             <div>
                 <Typography variant='headline' align='center' gutterBottom>
-                    Welcome to ToastMaster Event
+                    Welcome to ToastMaster Application
                 </Typography>
             </div>
         );

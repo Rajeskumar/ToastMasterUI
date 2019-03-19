@@ -10,6 +10,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 
 const styles = {
   list: {
@@ -40,12 +41,18 @@ class MenuDrawer extends React.Component {
     const menuList = (
       <div className={classes.list}>
         <List>
-          {['Dashboard', 'User Profile', 'Send email', 'Charts'].map((text, index) => (
+          {['Dashboard', 'Send email', 'Charts'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
+        </List>
+        <List>
+        <ListItem button key="User Profile">
+              <AccountCircle/>
+              <ListItemText primary="User Profile" />
+            </ListItem>
         </List>
         <Divider />
         <List>
