@@ -169,10 +169,10 @@ class Header extends React.Component {
         <AppBar position="static">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuDrawer />
+              <MenuDrawer/>
             </IconButton>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              ToastMaster
+              ToastVent
             </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -189,7 +189,7 @@ class Header extends React.Component {
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
               <AddEvaluationReport />
-              <CreateEvent memberList={this.state.memberList}/>
+              <CreateEvent/>
               <IconButton color="inherit">
                 <Badge badgeContent={4} color="secondary">
                   <MailIcon />

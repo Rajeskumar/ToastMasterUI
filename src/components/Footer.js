@@ -23,7 +23,7 @@ class Footer extends React.Component{
         [classes.footerWhiteFont]: whiteFont
     });
     return(
-    <footer className={footerClasses}>
+    <footer className={footerClasses} style={{background:'#3E4EBC'}}>
     <div className={classes.container}>
       <div className={classes.left}>
         <List className={classes.list}>
@@ -64,7 +64,7 @@ class Footer extends React.Component{
           className={aClasses}
           target="_blank"
         >
-          Creative App
+          Lexus Dev
         </a>{" "}
         for a better web.
       </div>

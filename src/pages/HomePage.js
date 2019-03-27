@@ -1,5 +1,7 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import BackGroundImage from '../assets/images/toastmaster_Image.png'
+import { Zoom } from '@material-ui/core';
 
 class HomePage extends React.Component{
 
@@ -15,9 +17,13 @@ class HomePage extends React.Component{
     render(){
         return(
             <div>
-                <Typography variant='headline' align='center' gutterBottom>
-                    Welcome to ToastMaster Application
-                </Typography>
+                <div style={{background:'#100e17', height:'800px', backgroundImage:`url(${BackGroundImage})`}}>
+                    <Zoom in={true} style={{ transitionDelay: '400ms' }}>
+                        <Typography variant='h2' align='center' gutterBottom>
+                            Welcome to Toastmaster Events
+                        </Typography>
+                    </Zoom>
+                </div>
             </div>
         );
     }

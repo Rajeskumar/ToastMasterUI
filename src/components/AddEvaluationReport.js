@@ -92,7 +92,7 @@ class AddEvaluationReport extends React.Component{
         super(props)
         this.state = {
             todayDate:"2019-01-01",
-            evaluationReport:{key:{memberName:'', eventId:''}, evaluatorName:'', count:'', report:'',evaluatorRole:'', memberRole:''},
+            evaluationReport:{key:{memberName:'', eventId:'', evaluatorRole:''}, evaluatorName:'', count:'', report:'', memberRole:''},
             openDialog : false,
         }
     }
@@ -120,7 +120,7 @@ class AddEvaluationReport extends React.Component{
 
     handleChange = name => event => {
         var evaluationReport = this.state.evaluationReport;
-        if(name === 'eventId' || name === 'memberName'){
+        if(name === 'eventId' || name === 'memberName' || name === 'evaluatorRole'){
             evaluationReport.key[name] = event.target.value;
         }else{
             evaluationReport[name]= event.target.value;
@@ -225,7 +225,7 @@ class AddEvaluationReport extends React.Component{
                         label="Evaluator Role"
                         className={classes.textField}
                         onChange={this.handleChange('evaluatorRole')}
-                        value={this.state.evaluationReport.evaluatorRole}
+                        value={this.state.evaluationReport.key.evaluatorRole}
                         
                         SelectProps={{
                             
